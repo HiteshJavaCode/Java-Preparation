@@ -6,6 +6,8 @@ package com.test;
 
 JVM (Java Virtual Machine): Executes Java bytecode on a specific platform.
 It handles tasks such as bytecode interpretation or just-in-time (JIT) compilation to native machine code, memory management, and garbage collection.
+JVM is platform dependent.
+
 
 JRE (Java Runtime Environment): Provides the runtime environment for Java applications.
 It includes the JVM, libraries, and other components required to run Java programs. T
