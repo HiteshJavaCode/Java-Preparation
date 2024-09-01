@@ -162,4 +162,10 @@ This can lead to more expressive and intuitive APIs.
 
  */
 public class oops {
+    private static int x = LIS.getStaticVar();
+    LIS xv = new LIS(1);
+    int y = xv.getInstanceVar();
+    public static void main(String args[]) {
+        System.out.println(x);
+    }
 }

@@ -9,7 +9,6 @@ package com.test;
         Access from Different Class: Local variables cannot be accessed from other classes.
         Scope: Local variables are declared within a method, constructor, or block and are only accessible within that method, constructor, or block.
 
-
 2. Instance Variables:
         Scope: Instance variables are declared within a class but outside any method, constructor, or block. They are accessible to all methods within the class and can have different values for each instance (object) of the class.
         Definition: They are variables that are associated with instances (objects) of a class and hold data that is specific to each instance.
@@ -54,8 +53,19 @@ package com.test;
 
 
 public class LIS {
+    public int getInstanceVar() {
+        return instanceVar;
+    }
+
     // Instance variables
     private int instanceVar;
+    private int instanceVar2;
+
+    public static int getStaticVar() {
+        staticVar = 500;
+        return staticVar;
+    }
+
     private static int staticVar;
 
     // Constructor to initialize instance variable
@@ -70,21 +80,33 @@ public class LIS {
         instanceVar += localVar; // Modifying instance variable using local variable
         System.out.println("Inside instanceMethod: instanceVar = " + instanceVar);
     }
+
     public void instanceMethod1() {
         int localVar = 95;
         // Local variable
         instanceVar += localVar; // Modifying instance variable using local variable
         System.out.println("Inside instanceMethod: instanceVar = " + instanceVar);
     }
-    // Static method to modify static variable
+
+    // Static method to modify static Variable
     public static void staticMethod() {
         int localVar = 30; // Local variable
-        staticVar += localVar; // Modifying static variable using local variable
+        staticVar += localVar;// Modifying static variable using local variable
         System.out.println("Inside staticMethod: staticVar = " + staticVar);
     }
+
+    public static  void stat(int x)
+    {
+         x= x+x;
+         System.out.println(x);
+    }
+
     public static void staticMethod1(LIS obj) {
-        int localVar = 0; // Local variable
-        staticVar += localVar; // Modifying static variable using local variable
+        int localVar = 45; // Local variable
+        staticVar += localVar;
+        int x= 20+ obj.instanceVar2;
+        System.out.println("Inside staticMethod: instancevar2 = " + staticVar+ "---"+ obj.instanceVar);
+        // Modifying static variable using local variable
         System.out.println("Inside staticMethod: staticVar = " + staticVar+ "---"+ obj.instanceVar);
     }
 
@@ -101,5 +123,6 @@ public class LIS {
         // Accessing static method
         staticMethod();
         staticMethod1(obj1);
+        stat(staticVar);
     }
 }
