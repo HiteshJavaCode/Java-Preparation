@@ -7,7 +7,7 @@ it deals with object which have both data(param) and behavior(methods) to mainta
 
 In summary, Object-Oriented Programming (OOP) is a programming paradigm based on the concepts of classes and objects, encapsulation, inheritance, polymorphism, and abstraction.
 OOP promotes code re-usability, modularity, and maintainability by organizing code into self-contained and reusable components.
-
+```
 
 Class:
 A class is a blueprint or template for creating objects. It defines the attributes (data) and methods (behavior) that all objects of that class will have.
@@ -165,7 +165,7 @@ public class oops {
     private static int x = LIS.getStaticVar();
     LIS xv = new LIS(1);
     int y = xv.getInstanceVar();
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println(x);
     }
 }
